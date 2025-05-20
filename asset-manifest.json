@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Qairoz/static/css/main.4c8b2eed.css",
+    "main.js": "/Qairoz/static/js/main.7707e160.js",
+    "static/js/453.419a5d54.chunk.js": "/Qairoz/static/js/453.419a5d54.chunk.js",
+    "static/media/whatsapp-icon.png": "/Qairoz/static/media/whatsapp-icon.a9fb47c3e41fc2e489de.png",
+    "static/media/about.jpg": "/Qairoz/static/media/about.4c9468f1045340af2752.jpg",
+    "static/media/ai.avif": "/Qairoz/static/media/ai.c694dd4ee2450387b2b9.avif",
+    "static/media/mission.avif": "/Qairoz/static/media/mission.ffc98d755c889fbbd704.avif",
+    "static/media/Qairo.svg": "/Qairoz/static/media/Qairo.536fccf869c1e8bfd5b7646072a70b8f.svg",
+    "static/media/karan.jpeg": "/Qairoz/static/media/karan.bfc818d76617fa1df285.jpeg",
+    "index.html": "/Qairoz/index.html",
+    "main.4c8b2eed.css.map": "/Qairoz/static/css/main.4c8b2eed.css.map",
+    "main.7707e160.js.map": "/Qairoz/static/js/main.7707e160.js.map",
+    "453.419a5d54.chunk.js.map": "/Qairoz/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c8b2eed.css",
+    "static/js/main.7707e160.js"
+  ]
+}
