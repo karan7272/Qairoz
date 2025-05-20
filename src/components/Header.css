@@ -1,0 +1,143 @@
+/* Overall Header */
+.main-header {
+    background: linear-gradient(90deg, #ffffff, #f7faff);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 2px 0; /* Even slimmer padding */
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Header container */
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #003366;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-right: auto;
+    transition: color 0.3s ease;
+}
+
+.logo img {
+    height: 90px; /* Bigger Logo */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, height 0.3s ease;
+}
+
+/* Logo hover effect */
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Scroll behavior - slightly smaller logo if needed */
+.main-header.scrolled .logo img {
+    height: 75px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #003366;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 6px 0;
+    transition: color 0.3s ease;
+}
+
+/* Underline on hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: #007BFF;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+/* Hamburger Menu */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle span {
+    height: 3px;
+    width: 26px;
+    background: #003366;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger open animation */
+.nav-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 85px; /* because logo is bigger */
+        right: 24px;
+        background: #ffffff;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        display: none;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}

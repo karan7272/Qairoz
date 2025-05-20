@@ -1,0 +1,26 @@
+/* Footer.css */
+
+/* General Footer Styles */
+footer {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text color */
+    padding: 20px; /* Padding around the footer */
+    text-align: center; /* Centered text */
+}
+
+/* Contact Information Styles */
+footer p {
+    margin: 5px 0; /* Margin for paragraphs */
+    font-size: 16px; /* Font size for readability */
+}
+
+/* Social Media Styles */
+footer a {
+    color: #28A745; /* Green color for links */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 5px; /* Margin between links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

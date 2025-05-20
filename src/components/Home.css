@@ -1,0 +1,312 @@
+/* Color Palette */
+:root {
+  --primary-color: #007BFF;
+  --secondary-color: #FFD700;
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --light-background: #ffffff;
+  --highlight-background: #f0f8ff;
+  --testimonial-background: #f8f8f8;
+  --dark-color: #003366;
+}
+
+/* General Layout */
+.home {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: var(--primary-color);
+  z-index: 9999;
+  transition: width 0.25s ease-out;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('../images/ai.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* Button Styles */
+.button,
+.cta-button-large {
+  padding: 18px 36px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
+.cta-button-large:hover {
+  background-color: #0056b3;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.highlights,
+.why-choose-us {
+  background: var(--light-background);
+  border-top: 5px solid var(--primary-color);
+}
+
+.about-us {
+  background-color: #f1f1f1;
+  border-top: 5px solid var(--primary-color);
+}
+
+.testimonials {
+  background-color: var(--light-background);
+  border-top: 5px solid var(--primary-color);
+}
+
+.final-cta {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.final-cta .cta-button-large {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+
+.final-cta .cta-button-large:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Highlight Cards */
+.highlight-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.highlight-card {
+  background: var(--highlight-background);
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 280px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card h3 {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin: 12px 0;
+}
+
+/* Why Choose Us List */
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.why-choose-us li {
+  font-size: 18px;
+  margin: 12px 0;
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.5;
+}
+
+.why-choose-us li::before {
+  content: '✔️';
+  position: absolute;
+  left: 0;
+}
+
+/* Testimonials */
+.testimonial-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: var(--testimonial-background);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  max-width: 350px;
+  font-style: italic;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+/* Floating Widgets */
+.floating-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.contact-widget {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.whatsapp-float img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .highlight-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .highlight-card {
+      width: 90%;
+  }
+
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+
+  .testimonial-carousel {
+      flex-direction: column;
+  }
+} 
+
+/* Additional Improvements */
+.hero h1 {
+  font-weight: 700; /* Increased font weight for emphasis */
+}
+
+.button,
+.cta-button-large {
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.cta-button-large:hover {
+  transform: scale(1.05); /* Slightly scale button on hover */
+}
+
+.testimonial {
+  padding: 20px; /* Adjusted padding for better spacing */
+  border: 1px solid var(--primary-color); /* Added border for distinction */
+}
+
+.testimonial:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
